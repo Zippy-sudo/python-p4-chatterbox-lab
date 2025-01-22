@@ -3,6 +3,7 @@ from datetime import datetime
 from app import app
 from models import db, Message
 
+
 class TestApp:
     '''Flask application in app.py'''
 
@@ -51,9 +52,9 @@ class TestApp:
                 '/messages',
                 json={
                     "body":"Hello 👋",
-                    "username":"Liza",
-                }
-            )
+                    "username":"Liza"
+                    }
+                )
 
             h = Message.query.filter_by(body="Hello 👋").first()
             assert(h)
@@ -69,7 +70,7 @@ class TestApp:
                 '/messages',
                 json={
                     "body":"Hello 👋",
-                    "username":"Liza",
+                    "username":"Liza"
                 }
             )
 
